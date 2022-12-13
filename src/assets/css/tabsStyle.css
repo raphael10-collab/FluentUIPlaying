@@ -1,0 +1,66 @@
+  .tab {
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 0.75em;
+
+    border: solid;
+    padding: 0 1em;
+    border-radius: 0.5em;
+
+    user-select: none;
+  }
+
+  .title {
+    max-width: 20ch;
+    overflow: visible;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .left,
+  .right {
+    display: flex;
+    gap: 0.25em;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .favicon {
+    aspect-ratio: 1;
+    height: 1em;
+  }
+
+  input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    text-align: center;
+
+    -webkit-app-region: no-drag;
+  }
+
+  .tab:not(:hover, :focus) :where(.address, .close) {
+    display: none;
+  }
+
+  .tab:where(:hover, :focus) .title {
+    display: none;
+  }
+
+  .loading {
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  span {
+    cursor: pointer;
+  }

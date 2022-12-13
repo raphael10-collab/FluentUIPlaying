@@ -1,0 +1,61 @@
+  .top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    -webkit-app-region: drag;
+    height: 30px;
+    gap: 1em;
+    padding: 0 1em;
+  }
+
+  .top-bar > div > * {
+    -webkit-app-region: no-drag;
+  }
+
+  .navigation {
+    display: flex;
+    gap: 0.5em;
+  }
+
+  .left,
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  span {
+    disabled: boolean;
+    user-select: none;
+    cursor: pointer;
+    right: boolean;
+    left: boolean;
+  }
+
+  .right {
+    position: absolute;
+    right: 0px;
+    border: 3px;
+  }
+
+  .left {
+    position: absolute;
+    left: 0px;
+    border: 3px;
+  }
+
+  .mac-window-controls {
+    width: 80px;
+  }
+
+  .tabs {
+    display: flex;
+    flex: 1;
+    gap: 0.5em;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .clear{
+    clear:both;
+  }
